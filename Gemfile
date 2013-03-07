@@ -1,15 +1,15 @@
 source 'https://rubygems.org'
-
+# *Gema que posteriormete utilizaremos en el tutorial
 gem 'rails', '3.2.12'
-gem 'bootstrap-sass'
-gem 'bcrypt-ruby'
-gem 'faker'
-gem 'will_paginate'
-gem 'bootstrap-will_paginate'
+#*gem 'bootstrap-sass' 
+#*gem 'bcrypt-ruby'
+#*gem 'faker'
+#*gem 'will_paginate'
+#*gem 'bootstrap-will_paginate'
 
 group :development do 
 	gem 'sqlite3'
-	gem 'annotate'
+	#*gem 'annotate'
 end
 
 # Bundle edge Rails instead:
@@ -31,16 +31,16 @@ gem 'jquery-rails'
 
 group :test, :development do
 	gem 'rspec-rails'
-	gem 'guard-rspec'
-	gem 'guard-spork'
-	gem 'spork'
+	#*gem 'guard-rspec'
+	#*gem 'guard-spork'
+	#*gem 'spork'
 end
 
 group :test do
 	gem 'capybara'
-	gem 'factory_girl_rails'
-	gem 'cucumber-rails'
-	gem 'database_cleaner'
+	#*gem 'factory_girl_rails'
+	#*gem 'cucumber-rails'
+	#*gem 'database_cleaner'
 end
 
 group :production do
