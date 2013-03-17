@@ -1,51 +1,66 @@
 require 'spec_helper'
 
 describe "StaticPages" do
-  describe "Home Page" do
-    it "should have the content 'Sample App'" do
+
+   let(:base_title) {Rails}
+  
+   describe "Home Page" do
+     it "should have the content 'Sample App'" do
     	visit '/static_pages/home'
     	page.should have_selector('h1', :text => 'Sample App')
-    end
+     end
   
 
-    it "should have the right title" do
+     it "should have the right title" do
       visit '/static_pages/home'
-      page.should have_selector('title', 
-                  :text => "Ruby on Rails Tutorial Sample App | Home")
-    end
+      page.should have_selector('title', :text => "#{base_title} | Home")
+     end
 
-    end
+   end
   
-  describe "Help Page" do
-    it "should have the content 'Help'" do
+   describe "Help Page" do
+     it "should have the content 'Help'" do
     	visit '/static_pages/help'
     	page.should have_selector('h1', :text => 'Help')
       
-    end
+     end
   
   
-    it "should have the right title" do
+     it "should have the right title" do
       visit '/static_pages/help'
-      page.should have_selector('title', 
-                  :text => "Ruby on Rails Tutorial Sample App | Help")
-    end
+      page.should have_selector('title', :text => "#{base_title} | Help")
+     end
   
-  end
+   end
   
   
-  describe "About Page" do
-    it "Tiene que contener 'About Us'" do
+   describe "About Page" do
+     it "Tiene que contener 'About Us'" do
     	visit '/static_pages/about'
     	page.should have_selector('h1', :text => 'About Us')
       
-    end
+     end
 
-    it "should have the right title" do
+     it "should have the right title" do
       visit '/static_pages/about'
-      page.should have_selector('title', 
-                  :text => "Ruby on Rails Tutorial Sample App | About")
-    end
+      page.should have_selector('title', :text => "#{base_title} | About")
+     end
 
-  end
+   end
+
+   describe "Pagina de Contacto" do
+      it "Debe de contener la palabra 'Contacto'" do
+         visit '/static_pages/contact'
+         page.should have_content('Contact')
+      end
+   
+      it "Debe contener el titulo Rails | Contact" do
+         visit '/static_pages/contact'
+         page.should have_selector('title', :text => "#{base_title} | Contact")
+      end
+   end
+         
+     
+
 
 end
