@@ -1,5 +1,5 @@
 SampleApp::Application.routes.draw do
-  #get "users/new"
+  get "users/new"
   match '/signup', to: 'users#new'
   #get "static_pages/about" .- Lo que poniamos anteriormente
   root to: 'static_pages#home' #Establecemos páginas principal
