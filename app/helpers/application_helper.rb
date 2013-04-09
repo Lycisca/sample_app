@@ -5,13 +5,13 @@ module ApplicationHelper
   # del titulo y el titulo de la página.
 
   def full_title(page_title)
-          base_title = "Rails"
+     base_title = "Rails"
 
-          if page_title.empty?
-                  base_title
-          else
-                  "#{base_title} | #{page_title}"
-          end
+     if page_title.empty?
+        base_title
+     else
+        "#{base_title} | #{page_title}"
+     end
 
   end
      

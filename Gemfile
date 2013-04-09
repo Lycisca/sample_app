@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
 # *Gema que posteriormete utilizaremos en el tutorial
+
 gem 'rails', '3.2.12'
-#*gem 'bootstrap-sass' 
+
+gem 'bootstrap-sass' 
 #*gem 'bcrypt-ruby'
 #*gem 'faker'
 #*gem 'will_paginate'
